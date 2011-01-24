@@ -1,3 +1,6 @@
 target
 *.iml
 Test.java
+.classpath
+.project
+.settings

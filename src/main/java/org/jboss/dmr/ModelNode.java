@@ -655,6 +655,13 @@ public class ModelNode implements Externalizable, Cloneable {
         return this;
     }
 
+    public ModelNode set(DelegateModelHandler newValue) {
+        checkProtect();
+        value = new DelegateModelValue(newValue);
+        return this;
+
+    }
+
     /**
      * Clear this node's value and change its type to {@link ModelType#UNDEFINED}.
      *
