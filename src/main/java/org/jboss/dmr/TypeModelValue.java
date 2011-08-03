@@ -53,6 +53,7 @@ final class TypeModelValue extends ModelValue {
     private static final TypeModelValue DECIMAL = new TypeModelValue(ModelType.BIG_DECIMAL);
     private static final TypeModelValue DOUBLE = new TypeModelValue(ModelType.DOUBLE);
     private static final TypeModelValue INT = new TypeModelValue(ModelType.INT);
+    private static final TypeModelValue INTEGER = new TypeModelValue(ModelType.BIG_INTEGER);
     private static final TypeModelValue LONG = new TypeModelValue(ModelType.LONG);
     private static final TypeModelValue LIST = new TypeModelValue(ModelType.LIST);
     private static final TypeModelValue OBJECT = new TypeModelValue(ModelType.OBJECT);
@@ -74,6 +75,8 @@ final class TypeModelValue extends ModelValue {
                 return DOUBLE;
             case BIG_DECIMAL:
                 return DECIMAL;
+            case BIG_INTEGER:
+                return INTEGER;
             case BYTES:
                 return BYTES;
             case LIST:
@@ -128,7 +131,7 @@ final class TypeModelValue extends ModelValue {
 
     /**
      * Determine whether this object is equal to another.
-     * 
+     *
      * @param other the other object
      * @return {@code true} if they are equal, {@code false} otherwise
      */
@@ -139,7 +142,7 @@ final class TypeModelValue extends ModelValue {
 
     /**
      * Determine whether this object is equal to another.
-     * 
+     *
      * @param other the other object
      * @return {@code true} if they are equal, {@code false} otherwise
      */
