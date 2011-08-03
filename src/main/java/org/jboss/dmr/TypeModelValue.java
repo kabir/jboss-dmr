@@ -52,11 +52,13 @@ final class TypeModelValue extends ModelValue {
     private static final TypeModelValue BYTES = new TypeModelValue(ModelType.BYTES);
     private static final TypeModelValue DECIMAL = new TypeModelValue(ModelType.BIG_DECIMAL);
     private static final TypeModelValue DOUBLE = new TypeModelValue(ModelType.DOUBLE);
+    private static final TypeModelValue EXPRESSION = new TypeModelValue(ModelType.EXPRESSION);
     private static final TypeModelValue INT = new TypeModelValue(ModelType.INT);
     private static final TypeModelValue INTEGER = new TypeModelValue(ModelType.BIG_INTEGER);
     private static final TypeModelValue LONG = new TypeModelValue(ModelType.LONG);
     private static final TypeModelValue LIST = new TypeModelValue(ModelType.LIST);
     private static final TypeModelValue OBJECT = new TypeModelValue(ModelType.OBJECT);
+    private static final TypeModelValue PROPERTY = new TypeModelValue(ModelType.PROPERTY);
     private static final TypeModelValue STRING = new TypeModelValue(ModelType.STRING);
     private static final TypeModelValue TYPE = new TypeModelValue(ModelType.TYPE);
     private static final TypeModelValue UNDEFINED = new TypeModelValue(ModelType.UNDEFINED);
@@ -85,6 +87,10 @@ final class TypeModelValue extends ModelValue {
                 return TYPE;
             case OBJECT:
                 return OBJECT;
+            case EXPRESSION:
+                return EXPRESSION;
+            case PROPERTY:
+                return PROPERTY;
             default:
                 return UNDEFINED;
         }
